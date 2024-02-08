@@ -1,0 +1,408 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #B6EADA, #1C82AD, #00337C, #13005A);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+
+/* NAVIGATION BAR */
+nav ul {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+}
+
+/* NAVIGATION BAR */
+
+/* Hero section */
+.main {
+  max-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  height: 100vh;
+}
+
+.profile-info {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-top: 40px;
+  margin-left: 150px;
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 80vh;
+  text-align: left;
+}
+
+.profile-info h1,
+.profile-info h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.profile-info,
+.a {
+  font-size: 130px;
+}
+
+.profile-info,
+h2 {
+  font-size: 40px;
+}
+
+.resume-download-button {
+  width: 230px;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
+  border: 2px solid #000;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-download-button:hover {
+  background-color: #B6EADA;
+}
+
+/* 3D element */
+#canvas-container {
+  margin-top: 40px;
+  flex-grow: 1;
+  flex-basis: 40vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas3d {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Hero section */
+
+/* Scroll down annimation */
+.scroll-animation {
+  position: absolute;
+  left: 50%;
+  bottom: 200px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.box {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box span {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  margin: -15px;
+  animation: animate 2s infinite;
+}
+
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0, 0);
+  }
+}
+
+/* Scroll down annimation */
+
+/* SVG Paths */
+.second-face {
+
+  height: 100%;
+  width: 100vw;
+}
+
+.content1 {
+  position: relative;
+  /* make the container positioned relatively */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+}
+
+.path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+.path2 {
+  stroke-width: 3px;
+  stroke: #000;
+}
+
+.content2 {
+  margin-top: 0%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+.path3 {
+  stroke: black;
+}
+
+.info1 {
+  font-family: 'Bebas Neue', sans-serif;
+  /* letter-spacing: 1px; */
+  max-width: 500px;
+  color: black;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.P {
+  color: black;
+  opacity: 0;
+  position: relative;
+  bottom: -40px;
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  bottom: 0;
+}
+
+.content3 {
+  position: relative;
+  /* make the container positioned relatively */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+
+.content4 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60vh;
+}
+
+/* SVG Paths */
+
+/* Projects */
+.pro {
+  font-family: 'Bebas Neue', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 3rem;
+  margin: 10rem 15rem;
+}
+
+.card {
+  height: 15rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #B6EADA;
+  grid-column: span 3;
+  font-size: 1.2rem;
+  padding: 5rem;
+  box-shadow: 0.7rem 0.7rem 0rem black;
+  border: 2px solid black;
+  gap: 2rem;
+}
+
+.card p {
+  line-height: 2rem;
+  display: none;
+}
+
+.card.active p {
+  display: block;
+}
+
+.card.active {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  order: 0;
+  height: auto;
+}
+
+.card.is-inactive {
+  grid-column: span 2;
+}
+
+.projects {
+  height: 100vh;
+  width: 100vw;
+  position: sticky;
+  top: 0;
+}
+
+.proHead {
+  font-family: 'Bebas Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-top: 20px;
+  padding-top: 50px;
+  font-size: 40px;
+}
+
+/* Projects */
+
+/* music section */
+.music {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.intro {
+  height: 100vh;
+}
+
+.intro video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* -webkit-filter: blur(0px);
+  filter: blur(3px); */
+}
+
+.intro #home {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  color: wheat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+
+
+/* music section */
+
+/* Medium devices (smaller desktops, 1600px and down) */
+@media (max-width: 1600px) {
+
+  .profile-info {
+    margin-left: 100px;
+  }
+
+  .profile-info,
+  .a {
+    font-size: 100px;
+  }
+
+  .profile-info,
+  h2 {
+    font-size: 30px;
+  }
+
+  #canvas-container {
+    flex-basis: 30vw;
+    height: 93vh;
+  }
+
+  #canvas3d {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ------------ */
+
+  .projects {
+    height: 150vh;
+    position: sticky;
+    top: -120px;
+  }
+
+  .proHead {
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    margin-top: 20px;
+    padding-top: 50px;
+    font-size: 40px;
+    position: relative;
+  }
+
+}
